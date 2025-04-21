@@ -74,3 +74,23 @@ class Session
         return self::$started;
     }
 
+    /**
+     * Destroys the current session and unsets all session and cookie data.
+     *
+     * @return bool Returns true if the session was destroyed successfully.
+     */
+
+    public static function destroy(): bool
+    {
+        session_destroy();
+        unset($_SESSION);
+        unset($_COOKIE[self::$sessionName]);
+
+        // Also remove via Flowaxy\Cookie, if available
+        if (class_exists(Cookie::class)) {
+            Cookie::set(self::$sessionName, '', -1);
+        }
+
+        self::$started = false;
+        return !isset($_SESSION);
+    }
