@@ -62,3 +62,15 @@ class Session
         session_name(self::$sessionName);
         self::$started = session_start();
     }
+
+    /**
+     * Checks if the session has already started.
+     *
+     * @return bool
+     */
+
+    public static function started(): bool
+    {
+        return self::$started;
+    }
+
