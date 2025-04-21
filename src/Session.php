@@ -118,3 +118,15 @@ class Session
     {
         return $_SESSION['s_' . $key] ?? false;
     }
+
+    /**
+     * Removes a session variable.
+     *
+     * @param string $key The key name (without prefix).
+     */
+
+    public static function remove(string $key): void
+    {
+        unset($_SESSION['s_' . $key]);
+    }
+}
