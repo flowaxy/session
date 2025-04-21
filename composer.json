@@ -1,12 +1,8 @@
 {
     "name": "flowaxy/session",
-    "description": "The Flowaxy session.",
+    "description": "Flowaxy Session Manager for PHP projects.",
     "type": "library",
-    "keywords": [
-        "flowaxy",
-        "helpers",
-        "session"
-    ],
+    "keywords": ["flowaxy", "session", "helpers", "manager"],
     "license": "MIT",
     "homepage": "https://flowaxy.com",
     "support": {
@@ -20,7 +16,8 @@
         }
     ],
     "require": {
-        "php": ">=8.2"
+        "php": ">=8.2",
+        "flowaxy/cookie": "^1.0"
     },
     "autoload": {
         "psr-4": {
