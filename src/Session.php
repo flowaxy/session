@@ -36,3 +36,29 @@ class Session
      */
 
     private static string $sessionName = 'FLOWAXY_SESSION';
+
+    /**
+     * Starts the session with secure cookie parameters.
+     *
+     * @param string $path   The path on the server in which the cookie will be available.
+     * @param bool   $secure Whether to only send the cookie over HTTPS.
+     */
+
+    public static function start(string $path = '/', bool $secure = false): void
+    {
+        // Set session lifetime to 1 hour
+        ini_set('session.gc_maxlifetime', 3600);
+
+        $cookieParams = session_get_cookie_params();
+
+        session_set_cookie_params([
+            'lifetime' => $cookieParams["lifetime"],
+            'path' => $path,
+            'domain' => $cookieParams["domain"],
+            'secure' => $secure,
+            'httponly' => true
+        ]);
+
+        session_name(self::$sessionName);
+        self::$started = session_start();
+    }
