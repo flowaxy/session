@@ -1,6 +1,6 @@
 {
     "name": "flowaxy/session",
-    "description": "Flowaxy Session Manager for PHP projects.",
+    "description": "Lightweight PHP library for managing sessions with a simple API. Ideal for use in CMS Flowaxy, landing pages, and any modern PHP web projects.",
     "type": "library",
     "keywords": ["flowaxy", "session", "helpers", "manager"],
     "license": "MIT",
