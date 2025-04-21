@@ -1,0 +1,33 @@
+{
+    "name": "flowaxy/session",
+    "description": "The Flowaxy session.",
+    "type": "library",
+    "keywords": [
+        "flowaxy",
+        "helpers",
+        "session"
+    ],
+    "license": "MIT",
+    "homepage": "https://flowaxy.com",
+    "support": {
+        "issues": "https://github.com/flowaxy/session/issues",
+        "source": "https://github.com/flowaxy/session"
+    },
+    "authors": [
+        {
+            "name": "Mykola Dovhopol",
+            "email": "flowaxy.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flowaxy\\": "src/"
+        }
+    },
+    "require-dev": {},
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
