@@ -106,3 +106,15 @@ class Session
     {
         $_SESSION['s_' . $key] = $value;
     }
+
+    /**
+     * Retrieves a session variable.
+     *
+     * @param string $key The key name (without prefix).
+     * @return mixed Returns the stored value or false if not set.
+     */
+
+    public static function get(string $key): mixed
+    {
+        return $_SESSION['s_' . $key] ?? false;
+    }
