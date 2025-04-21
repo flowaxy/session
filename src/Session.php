@@ -94,3 +94,15 @@ class Session
         self::$started = false;
         return !isset($_SESSION);
     }
+
+    /**
+     * Sets a session variable.
+     *
+     * @param string $key   The key name (will be prefixed internally).
+     * @param mixed  $value The value to store.
+     */
+
+    public static function set(string $key, mixed $value): void
+    {
+        $_SESSION['s_' . $key] = $value;
+    }
