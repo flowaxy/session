@@ -29,4 +29,10 @@ class Session
 
     private static bool $started = false;
 
-}
+    /**
+     * The name of the session cookie.
+     *
+     * @var string
+     */
+
+    private static string $sessionName = 'FLOWAXY_SESSION';
